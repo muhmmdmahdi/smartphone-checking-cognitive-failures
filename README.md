@@ -125,6 +125,24 @@ source("scripts/09_fit_gap3_stress_boundaries.R")
 
 ---
 
-## 📖 Citation & Data Provenance
-* **Original Dataset**: ResearchBox #628 ([https://researchbox.org/628](https://researchbox.org/628)).
-* **Original Study**: Hartanto et al. (2023). Smartphone screen time and daily cognitive failures in everyday life.
+## 📖 Data Provenance, Citation & Acknowledgments
+
+### Original Dataset & Authors
+The daily diary dataset utilized in this secondary reanalysis was originally collected, curated, and openly shared by:
+
+> **Hartanto, A., Lee, K. Y. X., Chua, Y. J., Quek, F. Y. X., & Majeed, N. M.** (2022).  
+> *Daily Cognitive Failures and Smartphone Use* [Data set].  
+> **ResearchBox #628**. [https://researchbox.org/628](https://researchbox.org/628)  
+> *Institutional Affiliations*: Singapore Management University & National University of Singapore.
+
+### Open Science Acknowledgment
+We gratefully acknowledge Dr. Andree Hartanto and co-authors for their commitment to open science, computational reproducibility, and transparent research practices. By providing public access to their raw daily diary observations, codebook, and analysis scripts via ResearchBox, they enabled this independent methodological reanalysis to examine task fragmentation, screen duration, and temporal dynamics.
+
+### Citing This Reanalysis
+If referencing or utilizing the analytical pipeline from this repository:
+```text
+Mahdi, M. (2026). Attentional Fragmentation vs. Screen Immersion: A Multilevel Reanalysis 
+of Daily Smartphone Checking and Cognitive Failures. GitHub repository: 
+https://github.com/muhmmdmahdi/smartphone-checking-cognitive-failures
+```
+
