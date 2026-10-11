@@ -30,22 +30,45 @@ Through multilevel modeling of **1,229 daily observations across 181 participant
 
 ## 📊 Summary of Primary Multilevel Models
 
-### 1. Final Additive Synthesis Model (Model 3C)
-$$\text{dayCogFail}_{ij} = \gamma_{00} + \beta_1 (\text{Checking\_dev}) + \beta_2 (\text{ScreenTime\_dev}) + \beta_3 (\text{Stressor\_dev}) + \gamma_{01} (\text{Checking\_mn}) + \gamma_{02} (\text{ScreenTime\_mn}) + \gamma_{03} (\text{Stressor\_avg}) + u_{0j} + e_{ij}$$
+### Statistical Model Specification
+The final additive synthesis model decomposes within-person state dynamics from between-person trait baselines across daily smartphone metrics and stressor exposure:
 
-| Predictor Level | Variable Name | Parameter | Estimate ($\beta$) | Std. Error | $t$-value | $p$-value | 95% Wald CI |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Fixed Intercept** | $\gamma_{00}$ | Intercept | `0.1228` | `0.1146` | `1.071` | `.284` | `[-0.1018, 0.3475]` |
+$$
+\text{CognitiveFailures}_{ij} = \gamma_{00} + \beta_1(\text{CheckingDev}_{ij}) + \beta_2(\text{ScreenTimeDev}_{ij}) + \beta_3(\text{StressorDev}_{ij}) + \gamma_{01}(\text{CheckingMean}_j) + \gamma_{02}(\text{ScreenTimeMean}_j) + \gamma_{03}(\text{StressorMean}_j) + u_{0j} + e_{ij}
+$$
+
+### Parameter Estimates (Final Synthesis Model 3C)
+
+#### Fixed Effects
+| Level | Predictor | Parameter | Estimate ($\beta$) | Std. Error | $t$-value | $p$-value | 95% Wald CI |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Intercept** | `(Intercept)` | $\gamma_{00}$ | `0.1228` | `0.1146` | `1.071` | `.284` | `[-0.1018, 0.3475]` |
 | **Level 1 (Within-Person)** | `dayScreenChecking_dev` | $\beta_1$ | **`+0.000649`** | `0.000194` | `3.350` | **`< .001`** | `[ 0.00027,  0.00103]` |
 | | `dayScreenTime_dev` (hrs) | $\beta_2$ | **`-0.013546`** | `0.005164` | `-2.623` | **`.008`** | `[-0.02367, -0.00343]` |
 | | `dayStressor_dev` (event) | $\beta_3$ | **`+0.146111`** | `0.024590` | `5.942` | **`< .000001`** | `[ 0.09792,  0.19431]` |
 | **Level 2 (Between-Person)** | `dayScreenChecking_mn` | $\gamma_{01}$ | `0.000094` | `0.000508` | `0.185` | `.853` | `[-0.00090,  0.00109]` |
 | | `dayScreenTime_mn` (hrs) | $\gamma_{02}$ | `0.016427` | `0.014471` | `1.135` | `.256` | `[-0.01193,  0.04479]` |
 | | `dayStressor.avg` | $\gamma_{03}$ | **`+0.669343`** | `0.103289` | `6.480` | **`< .000001`** | `[ 0.46690,  0.87178]` |
-| **Random Effects** | Participant Intercept ($\tau_{00}$) | | `0.1244` | $SD = 0.353$ | | | |
-| | Residual Variance ($\sigma^2$) | | `0.0948` | $SD = 0.308$ | | | |
 
-*Note. $N = 181$ participants, $T = 1,229$ daily observations. Fit with Maximum Likelihood via `lme4::lmer`.*
+#### Random Effects & Model Fit
+| Component | Group | Parameter | Variance ($\sigma^2$) | Std. Dev. ($\sigma$) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Participant Baseline** | `participantID` | $\tau_{00}$ | `0.1244` | `0.3528` |
+| **Residual (Within-Person)** | Observation | $\sigma^2$ | `0.0948` | `0.3079` |
+
+*Note. Sample size: $N = 181$ participants, $T = 1,229$ daily observations across 7 diary days. Estimation method: Maximum Likelihood via `lme4::lmer`.*
+
+---
+
+### Comparison Across Key Models
+
+| Model | Focus | Checking Within ($\beta_1$) | Screen Time Within ($\beta_2$) | Daily Stressor ($\beta_3$) | Key Conclusion |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **Model 3 (Replication)** | Checking Alone | `+0.000579` ($p = .003$) | — | — | Baseline replication of Hartanto et al. |
+| **Model 4 (Raw Conflated)** | Uncentered Raw | `+0.000546` ($p = .003$) | — | — | Conflates within- and between-person levels |
+| **Gap 1 (Simultaneous)** | Frequency vs. Duration | `+0.000673` ($p < .001$) | `-0.015125` ($p = .004$) | — | Opposing effects: Checking harmful, duration protective |
+| **Gap 1 (Fully Adjusted)** | 11 Covariates Included | `+0.000506` ($p = .008$) | `-0.012062` ($p = .018$) | Included | Both effects survive control for mood, stress, demographics |
+| **Model 3C (Final Synthesis)** | Decomposed Decomposition | `+0.000649` ($p < .001$) | `-0.013546` ($p = .008$) | `+0.146111` ($p < .000001$) | Complete orthogonal synthesis |
 
 ---
 
