@@ -1,0 +1,91 @@
+id,varname,description
+var1,participantID,"Person identifier (anonymous)"
+var2,demogAge,"Age in years"
+var3,demogFemale,"Sex (0 = male, 1 = female)"
+var4,demogNonChinese,"Race (0 = Chinese, 1 = non-Chinese)"
+var5,demogAge.c,"var 5, var 8, var 9: grand mean center of demogAge, sesIncomeHH and sesLadder"
+var6,sesIncomeHH,"Household income (1-6; higher values reflect higher household income)"
+var7,sesLadder,"Subjective socioeconomic status (1 = lowest, 10 = highest)"
+var8,sesIncomeHH.c,
+var9,sesLadder.c,
+var10,day,"Diary day number"
+var11,dayAnxiety5,"Daily state anxiety (0 = least, 4 = most)"
+var12,daySwbNAdds,"Square-root of daySwbNAdds_raw"
+var13,daySwbPAdds,"Daily positive affect (0 = none of the time, 4 = all of the time"
+var14,dayCogFail,"Daily cognitive failures (0 = least, 3 = most)"
+var15,dayScreenChecking,"Number of times of smartphone checking daily"
+var16,dayScreenTime,"Daily smartphone screen time in hours"
+var17,dayScreenSocial,"Daily smartphone screen time for social related applications (e.g., Facebook, Instagram)"
+var18,dayScreenSpending,"Daily smartphone screen time for finance-, shopping-, food- and productivity- related applications (e.g., American Express, Amazon)"
+var19,dayScreenTools,"Daily smartphone screen time for applications that act as tools to assist users to perform certain tasks (e.g., Calculator, Camera, Google Maps)"
+var20,dayScreenEntGame,"Daily smartphone screen time for entertainment and games applications (e.g., Netflix, Youtube)"
+var21,dayScreenHealth,"Daily smartphone screen time for health and fitness related applications (e.g., Great Eastern Life, HealthHub)"
+var22,dayScreenOthers,"Daily smartphone screen time for applications not related to the other 5 categories"
+var23,dayStressor,"Daily Stressor Exposure (0 = no stressor exposure, 1 = stressor exposure)"
+var24,daySwbNAdds_raw,"Daily negative affect (0 = none of the time, 4 = all of the time)"
+var25,dayScreenChecking_mn,"var 25 - var 34: mean for each participant for the respective variables"
+var26,dayScreenTime_mn,
+var27,dayScreenSocial_mn,
+var28,dayScreenSpending_mn,
+var29,dayScreenTools_mn,
+var30,dayScreenEntGame_mn,
+var31,dayScreenHealth_mn,
+var32,dayScreenOthers_mn,
+var33,daySwbPAdds_mn,
+var34,daySwbNAdds_mn,
+var35,dayScreenChecking_dev,"var 35 - var 44: difference from participant mean for each day for the respective variables"
+var36,dayScreenTime_dev,
+var37,dayScreenSocial_dev,
+var38,dayScreenSpending_dev,
+var39,dayScreenTools_dev,
+var40,dayScreenEntGame_dev,
+var41,dayScreenHealth_dev,
+var42,dayScreenOthers_dev,
+var43,daySwbPAdds_dev,
+var44,daySwbNAdds_dev,
+var45,dayStressor.avg,"mean of dayStressor for each participant"
+var46,itemDAYCOGFAIL01,"var 46 - var 58: items 1-13 in the Cognitive Failures in Everyday Life Scale (Lange & Heinz-Martin, 2014)"
+var47,itemDAYCOGFAIL02,
+var48,itemDAYCOGFAIL03,
+var49,itemDAYCOGFAIL04,
+var50,itemDAYCOGFAIL05,
+var51,itemDAYCOGFAIL06,
+var52,itemDAYCOGFAIL07,
+var53,itemDAYCOGFAIL08,
+var54,itemDAYCOGFAIL09,
+var55,itemDAYCOGFAIL10,
+var56,itemDAYCOGFAIL11,
+var57,itemDAYCOGFAIL12,
+var58,itemDAYCOGFAIL13,
+var59,itemDAYPA01,"var 59 - var 71: items 1-13 for positive affect in the Daily Distress Scale (Mroczek & Kolarz, 1998)"
+var60,itemDAYPA02,
+var61,itemDAYPA03,
+var62,itemDAYPA04,
+var63,itemDAYPA05,
+var64,itemDAYPA06,
+var65,itemDAYPA07,
+var66,itemDAYPA08,
+var67,itemDAYPA09,
+var68,itemDAYPA10,
+var69,itemDAYPA11,
+var70,itemDAYPA12,
+var71,itemDAYPA13,
+var72,itemDAYNA01,"var 72 - var 85: items 1-14 for negative affect in the Daily Distress Scale (Mroczek & Kolarz, 1998)"
+var73,itemDAYNA02,
+var74,itemDAYNA03,
+var75,itemDAYNA04,
+var76,itemDAYNA05,
+var77,itemDAYNA06,
+var78,itemDAYNA07,
+var79,itemDAYNA08,
+var80,itemDAYNA09,
+var81,itemDAYNA10,
+var82,itemDAYNA11,
+var83,itemDAYNA12,
+var84,itemDAYNA13,
+var85,itemDAYNA14,
+var86,itemDAYANXIETY1,"var 86 - var 90: items 1-5 in the State-Trait Anxiety Inventory (STAI; Spielberger et al., 1983)"
+var87,itemDAYANXIETY2,
+var88,itemDAYANXIETY3,
+var89,itemDAYANXIETY4,
+var90,itemDAYANXIETY5,
